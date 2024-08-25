@@ -16,7 +16,7 @@ const getData = async (data:JSON) => {
     }
     const result = await response.json();
     return result;
-  } catch (error) {
+  } catch (error:any) {
     console.error('Error fetching data:', error);
     return { error: error.message };
   }
