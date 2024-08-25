@@ -2,14 +2,14 @@
 import Filter from "@/components/Filter";
 import { useState } from 'react';
 
-const getData = async (data:JSON) => {
+const getData = async (data: object) => {
   try {
     const response = await fetch('https://bajaj-finserv-240k.onrender.com/bfhl', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ data }), 
+      body: JSON.stringify(data), 
     });
     if (!response.ok) {
       throw new Error('Network response was not ok');
